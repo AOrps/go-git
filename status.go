@@ -48,7 +48,7 @@ func (s Status) String() string {
 			path = fmt.Sprintf("%s -> %s", path, status.Extra)
 		}
 
-		fmt.Fprintf(buf, "%c%c %s\n", status.Staging, status.Worktree, path)
+		fmt.Fprintf(buf, "%c%c %s", status.Staging, status.Worktree, path)
 	}
 
 	return buf.String()
